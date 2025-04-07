@@ -749,19 +749,24 @@ img {
   color: #2e2f42;
   margin-bottom: 16px;
 }
+
+.textarea-container {
+  margin-bottom: 16px;
+}
+
 .form-textarea {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
   height: 120px;
-  margin-bottom: 16px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   padding-left: 16px;
   padding-top: 8px;
-  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
   resize: none;
   transition: border-color 250ms ease;
@@ -805,14 +810,15 @@ img {
 }
 
 .input-privacy:checked + .privacy-form .checkbox-icon {
-  fill: #ffffff;
+  fill: #f4f4fd;
   stroke: #ffffff;
+  border: none;
 }
 
 .privacy-form {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   position: relative;
