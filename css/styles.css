@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --accent-color: #4d5ae5;
+  --checked-icon-color: #f4f4fd;
+  --checked-bg-color: #404bbf;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -622,7 +628,6 @@ img {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -637,6 +642,7 @@ img {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   padding: 72px 24px 24px 24px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
@@ -756,6 +762,7 @@ img {
 
 .form-textarea {
   border: 1px solid rgba(46, 47, 66, 0.4);
+  color: rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 100%;
   height: 120px;
@@ -763,13 +770,11 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  padding-left: 16px;
-  padding-top: 8px;
+  padding: 8px 16px;
   background-color: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
   resize: none;
-  transition: border-color 250ms ease;
 }
 .form-textarea:focus {
   border-color: #4d5ae5;
@@ -802,11 +807,6 @@ img {
   margin-bottom: 24px;
   display: flex;
   align-items: center;
-}
-
-.input-privacy:checked + .privacy-form .modal-check-icon {
-  border: 1px solid #404bbf;
-  background-color: #404bbf;
 }
 
 .input-privacy:checked + .privacy-form .checkbox-icon {
