@@ -760,6 +760,11 @@ img {
   margin-bottom: 16px;
 }
 
+.form-textarea:focus::placeholder {
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-textarea {
   border: 1px solid rgba(46, 47, 66, 0.4);
   color: rgba(46, 47, 66, 0.4);
@@ -809,6 +814,10 @@ img {
   align-items: center;
 }
 
+.input-privacy:checked + .privacy-form .modal-check-icon {
+  border: 1px solid #404bbf;
+  background-color: #404bbf;
+}
 .input-privacy:checked + .privacy-form .checkbox-icon {
   fill: #f4f4fd;
   stroke: #ffffff;
