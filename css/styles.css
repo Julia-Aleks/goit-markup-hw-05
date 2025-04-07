@@ -815,9 +815,9 @@ img {
 }
 
 .input-privacy:checked + .privacy-form .modal-check-icon {
-  border: 1px solid #404bbf;
   background-color: #404bbf;
 }
+
 .input-privacy:checked + .privacy-form .checkbox-icon {
   fill: #f4f4fd;
   stroke: #ffffff;
@@ -834,12 +834,13 @@ img {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  a {
-    line-height: 1.33;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #4d5ae5;
-  }
+}
+
+.privacy-form a {
+  line-height: 1.33;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
 }
 
 .modal-check-icon {
