@@ -526,6 +526,9 @@ img {
   color: #fff;
   margin-bottom: 16px;
 }
+.footer-media {
+  margin-right: 80px;
+}
 
 .footer-flex {
   display: flex;
@@ -539,6 +542,68 @@ img {
 .social-list-footer .link-icons:focus {
   background-color: #31d0aa;
 }
+.footer-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  background: #4d5ae5;
+  border-radius: 4px;
+  padding: 8px 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 165px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  gap: 16px;
+}
+
+.footer-subscribe {
+  align-items: center;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  background-color: transparent;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 24px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  color: #fff;
+}
+
+.footer-input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.icon-footer {
+  fill: #fff;
+}
+
+.footer-btn:hover,
+.footer-btn:focus {
+  background-color: #404bbf;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -547,7 +612,9 @@ img {
   height: 100%;
   z-index: 1000;
   background-color: rgba(46, 47, 66, 0.4);
-  opacity: 1;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .modal {
   position: absolute;
@@ -565,6 +632,11 @@ img {
   padding-top: 72px;
 }
 
+.is-open {
+  visibility: visible;
+  pointer-events: auto;
+  opacity: 1;
+}
 .form {
 }
 .form-label {
@@ -575,8 +647,6 @@ img {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-
-  margin-bottom: 4px;
 }
 
 .form-input {
@@ -613,7 +683,6 @@ img {
   align-items: flex-start;
   min-height: 40px;
   width: 100%;
-  margin-bottom: 8px;
 }
 
 .modal-input-wrap {
@@ -646,9 +715,13 @@ img {
 .close-btn:focus {
   background-color: #404bbf;
 }
+
 .close-btn:hover .icon-close,
 .close-btn:focus .icon-close {
   fill: #fff;
+}
+.form-input:focus + .input-icon {
+  fill: #4d5ae5;
 }
 
 .icon-close {
@@ -673,10 +746,17 @@ img {
   margin-bottom: 16px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.16;
   letter-spacing: 0.04em;
   padding-left: 16px;
   padding-top: 8px;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms ease;
+}
+.form-textarea:focus {
+  border-color: #4d5ae5;
 }
 
 .submit-btn {
@@ -706,14 +786,16 @@ img {
   margin-bottom: 24px;
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.input-privacy {
-  border-radius: 2px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  width: 16px;
-  height: 16px;
+.input-privacy:checked + .privacy-form .modal-check-icon {
+  border: 1px solid #404bbf;
+  background-color: #404bbf;
+}
+
+.input-privacy:checked + .privacy-form .checkbox-icon {
+  fill: #ffffff;
+  stroke: #ffffff;
 }
 
 .privacy-form {
@@ -722,24 +804,33 @@ img {
   line-height: 1.16;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  gap: 8px;
   position: relative;
-  display: flex;
   align-items: center;
+  justify-content: center;
   cursor: pointer;
+  a {
+    line-height: 1.33;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #4d5ae5;
+  }
 }
 
-.link-privacy {
-  line-height: 1.33;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: #4d5ae5;
-}
-.checkbox-icon {
+.modal-check-icon {
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
   width: 16px;
   height: 16px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
   fill: transparent;
-  stroke: rgba(46, 47, 66, 0.4);
+  display: inline-flex;
+}
+
+.checkbox-icon {
+  fill: transparent;
+  stroke: transparent;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
