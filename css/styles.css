@@ -817,6 +817,7 @@ img {
 .input-privacy:checked + .privacy-form .modal-check-icon {
   background-color: #404bbf;
   border: none;
+  fill: #f4f4fd;
 }
 
 .input-privacy:checked + .privacy-form .checkbox-icon {
