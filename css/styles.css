@@ -816,12 +816,12 @@ img {
 
 .input-privacy:checked + .privacy-form .modal-check-icon {
   background-color: #404bbf;
+  border: none;
 }
 
 .input-privacy:checked + .privacy-form .checkbox-icon {
   fill: #f4f4fd;
   stroke: #ffffff;
-  border: none;
 }
 
 .privacy-form {
